@@ -1,0 +1,55 @@
+.Events-list .card{
+    padding: 15px 15px;
+    border: none;
+    border-radius: 10px;
+    margin: 10px;
+}
+.Date-Event-Table{
+    padding: 10px 10px;
+    border-radius: 5px;
+    text-align: center;
+    /* margin-right: 5px; */
+    line-height: 16px;
+    height: -moz-fit-content;
+    height: fit-content;
+    font-size: 15px;
+    font-weight: 500;
+}
+.action-button{
+    border-radius: 4px;
+    padding: 1px 6px 6px 6px;
+    cursor: pointer;
+    font-size: 18px;
+}
+.btn-delete{
+    color: red;
+    border: red 1px solid;
+}
+.btn-delete:hover{
+    background-color: red;
+    color: white;
+}
+.btn-call{
+    color: blue;
+    border: blue 1px solid;
+}
+.btn-call:hover{
+    background-color: blue;
+    color: white;
+}
+/* //search */
+.allemp_searchinput{
+    border-radius: 5px;
+    background-color: #fff;
+    border: 1px solid #d3dfea;
+    color: #263871;
+    font-size: .9375rem;
+    line-height: 1.6;
+    opacity: 1;
+    outline: 0;
+    padding: 0.375rem 0.75rem;
+}
+.allemp_searchinput:focus{outline: none;}
+.form-select:focus {
+ box-shadow: none
+}

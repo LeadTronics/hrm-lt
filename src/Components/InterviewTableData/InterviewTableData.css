@@ -1,0 +1,155 @@
+.allint_table{font-size: 14px;}
+.tab_head{
+    color:#313e6a;
+    font-size: .875re;
+    text-transform: capitalize;
+}
+.allin_tabpro{
+    border-radius: 50%;
+    height: 45px;
+}
+.action-button{
+    border-radius: 4px;
+    padding: 1px 6px 6px 6px;
+    cursor: pointer;
+    font-size: 18px;
+}
+.btn-mail1{
+    color: green;
+    border: green 1px solid;
+}
+.btn-mail1:hover{
+    background-color: green;
+    color: white;
+}
+.btn-call1{
+    color: blue;
+    border: blue 1px solid;
+}
+.btn-call1:hover{
+    background-color: blue;
+    color: white;
+}
+.btn-delete{
+    color: red;
+    border: red 1px solid;
+}
+.btn-delete:hover{
+    background-color: red;
+    color: white;
+}
+.tabledel_icon{
+    font-size: 17px;
+    color: #f7284a;
+    border: #f7284a 1px solid;
+}
+.tabledel_icon:hover{
+    background-color: #f7284a;
+    color: white;
+}
+.tableupdate_icon{
+    font-size: 17px;
+    color: #1fa37c;
+    border: #1fa37c 1px solid;
+}
+.tableupdate_icon:hover{
+    color: white !important;
+    background-color: #1fa37c;
+}
+/* searchbox */
+.searchbox{ padding: 5px 5px;}
+.outline-success{
+    border-radius:10px;
+    background-color:#1d1d1d;
+    color:#ffffff;
+}
+/* Table Status */
+.Status_interview{
+    background-color: #1fa37c;
+    color: #fff;
+    padding: 2px;
+    border-radius: 0px 10px;
+}
+.status_fill{
+    background-color: #ffffff;
+    color:#000000;
+}
+/* pagination  */
+.Pagination-div{
+    display: flex;
+    align-items: right;
+    justify-content: right;
+}
+/* table box */
+.interview_schedule_box{
+    padding: 0px 25px 25px 25px;
+    background-color: #fff;
+    border-radius: 10px !important;
+    box-shadow: 0 0.3rem 1.525rem -0.375rem #2e2828f7;
+}
+.intTable-header{
+    padding: 5px 0px;
+    font-size: 25px;
+}
+.Heading_interview {
+    margin-top: 80px;
+    background: #f1f4fb;
+    color: #263871;
+    text-align: left !important;
+    padding: 0px 25px 25px 25px;
+}
+.Interview_List .card {
+    padding: 15px 15px;
+    border: none;
+    border-radius: 10px;
+    margin: 10px;
+}
+.border-bottom td{
+    text-align: center;
+}
+/* filter icon */
+ /* padding: 0.275rem 2.25rem 0.275rem 0.5rem !important; */
+.select-filter{
+    background-image: url(../../img/Interviewer_IMG/filter.jpg) !important;
+    height:10px !important;
+    font-size: .75rem !important;
+    border:none !important;
+    background-position: left 0.75rem center !important;
+}
+/* / Loader css / */
+/* z-index:9999; */
+.loader_table {
+    top:70%;
+    left:50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    position: absolute;
+    margin:0;
+    z-index: 9999;
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid #263871;
+    width: 50px;
+    height: 50px;
+    -webkit-animation: spin 2s linear infinite; 
+    animation: spin 2s linear infinite;  
+  }
+  /* / Safari / */
+  @-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  /* //////////////////////////////////// */
+
+@media screen and (min-width:320px) and (max-width:768px){
+    .Pagination-div, .dataTables_info {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+}
