@@ -11,6 +11,7 @@
 .navbar-light .navbar-brand:hover {
   color: white !important;
 }
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
@@ -27,18 +28,21 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
-.Dash-logo{
+
+.Dash-logo {
   font-size: 30px;
   padding: 0px 0px;
   padding: 0px 80px;
 }
-.Total-cards .card, .events .card, .Gender-chart .card, .Upcoming-Events .card, .Recently-joined .card{
+
+.Total-cards .card, .events .card, .Gender-chart .card, .Upcoming-Events .card, .Recently-joined .card {
   padding: 15px 15px;
   border: none;
   border-radius: 10px;
   margin: 10px;
 }
-.calendet-date{
+
+.calendet-date {
   padding: 8px 5px;
   border-radius: 5px;
   text-align: center;
@@ -48,9 +52,11 @@
   font-size: 13px;
   font-weight: 500;
 }
+
 .Upcoming-table-dash .table {
   border-color: white;
 }
+
 .App-link {
   color: #61dafb;
 }
@@ -59,34 +65,39 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
 }
 
 /* FOOTER */
-.Footer{
+.Footer {
   /* padding: 1.25rem 1.25rem 1.25rem 270px; */
-  padding:  10px 10px;
+  padding: 10px 10px;
   font-size: 15px;
   color: #263871;
   font-weight: 400;
-  font-family: Roboto,sans-serif;
+  font-family: Roboto, sans-serif;
   line-height: 1.5;
   text-align: center !important;
 }
-.Footer-Link{
+
+.Footer-Link {
   color: gray !important;
 }
-.Footer-Link:hover{
+
+.Footer-Link:hover {
   color: blue !important;
 }
-.sidebar-text-content{
+
+.sidebar-text-content {
 
   background: #f1f4fb;
   color: #263871;
   text-align: left !important;
 }
-.Page-Content{
+
+.Page-Content {
   padding: 100px 10px 20px 10px;
 }

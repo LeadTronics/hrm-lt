@@ -1,15 +1,18 @@
-.dashboard{
+.dashboard {
     overflow: hidden;
 }
-.sidebar-dashboard{
+
+.sidebar-dashboard {
     background: #17263a;
     color: white;
 }
-.sidebar-dashboard .bar-nav-title{
+
+.sidebar-dashboard .bar-nav-title {
     font-size: 18px;
     font-weight: 400;
 }
-.sidebar-text-content{
+
+.sidebar-text-content {
 
     background: #f1f4fb;
     color: #263871;
@@ -17,22 +20,25 @@
 }
 
 .border-Bgray {
-    border-bottom: 1px solid #4b4d4f!important;
+    border-bottom: 1px solid #4b4d4f !important;
 }
-.dashboard-header{
+
+.dashboard-header {
     padding: 5px 0px;
     font-size: 25px;
 }
 
-.left-navigate{
+.left-navigate {
     padding: 10px 20px;
     text-align: left !important;
 }
-a{
+
+a {
     text-decoration: none !important;
     color: inherit;
 }
-.overlayChart{
+
+.overlayChart {
     position: absolute;
     top: 0;
     /* margin-right: 95px; */
@@ -46,7 +52,8 @@ a{
     text-align: center;
     /* pointer-events: none; */
 }
-.totalLabel{
+
+.totalLabel {
     font-size: 25px;
     font-weight: 700;
 }
@@ -57,10 +64,12 @@ a{
     height: 12px;
     width: 12px;
 }
+
 .dataEvent {
-    overflow-y:scroll;
-    height:165px;
+    overflow-y: scroll;
+    height: 165px;
 }
+
 .Rec-Jobs .nav-tabs .nav-link {
     background: #ebeff8;
     border: 1px solid #e9ebfa;
@@ -70,9 +79,11 @@ a{
     font-weight: 500;
     color: #424e79;
 }
+
 .Rec-Jobs .nav-link, .nav-tabs .nav-link.active {
     background: white;
 }
+
 .avatar {
     background: #36f no-repeat 50%/cover;
     color: #fff;
@@ -87,47 +98,57 @@ a{
     width: 2rem;
     border-radius: 50%;
 }
+
 .avatar-md {
     font-size: 1rem;
     height: 2.5rem;
     line-height: 2.5rem;
     width: 2.5rem;
 }
-.action-button{
+
+.action-button {
     border-radius: 4px;
     padding: 1px 6px 6px 6px;
     cursor: pointer;
     font-size: 18px;
 }
-.btn-mail{
+
+.btn-mail {
     color: green;
     border: green 1px solid;
 }
-.btn-mail:hover{
+
+.btn-mail:hover {
     background-color: green;
     color: white;
 }
-.btn-call{
+
+.btn-call {
     color: blue;
     border: blue 1px solid;
 }
-.btn-call:hover{
+
+.btn-call:hover {
     background-color: blue;
     color: white;
 }
-.btn-delete{
+
+.btn-delete {
     color: red;
     border: red 1px solid;
 }
-.btn-delete:hover{
+
+.btn-delete:hover {
     background-color: red;
     color: white;
 }
+
 .table td {
     border-top: 0;
     padding: 0.75rem;
     vertical-align: middle;
 }
+
 .table_img {
     align-items: center;
     font-size: 1.25rem;
@@ -136,14 +157,15 @@ a{
     padding: 10px;
     width: 50px;
 }
-@media (max-width:991px){
-    .Dash-logo{
+
+@media (max-width:991px) {
+    .Dash-logo {
         padding: 0px 0px;
     }
 }
 
 /* Skeleton */
-.Skeleton-Dash{
+.Skeleton-Dash {
     height: 50px;
     background: linear-gradient(to right,
             rgba(255, 255, 255, 0),
@@ -155,8 +177,9 @@ a{
     background-position: 0 0;
     animation: shine 1s infinite;
     margin-bottom: 15px;
-  }
-  .Sk1{
+}
+
+.Sk1 {
     height: 17px;
     width: 90px;
     background: linear-gradient(to right,
@@ -168,16 +191,19 @@ a{
     background-size: 50px 500px;
     background-position: 0 0;
     animation: shine 1s infinite;
-  }
-  @keyframes shine {
+}
+
+@keyframes shine {
     to {
         background-position: 100% 0;
     }
 }
-.gray-color{
+
+.gray-color {
     color: #263871;
 }
-.blockText1{
+
+.blockText1 {
     padding: 8px 5px;
     border-radius: 5px;
     text-align: center;
@@ -189,7 +215,8 @@ a{
     color: blue;
     background: #e8eaf6;
 }
-.blockText2{
+
+.blockText2 {
     padding: 8px 5px;
     border-radius: 5px;
     text-align: center;
@@ -198,7 +225,7 @@ a{
     height: fit-content;
     font-size: 13px;
     font-weight: 500;
-    color:#bf360c;
+    color: #bf360c;
     background: #ffcdd2ab;
 
 }

@@ -1,4 +1,4 @@
-import { React} from 'react'
+import { React } from 'react'
 import './Topbar.css'
 import { FaBars } from 'react-icons/fa'
 import { FiSettings, FiEdit2 } from 'react-icons/fi'
@@ -17,10 +17,10 @@ import { useNavigate } from 'react-router-dom'
 const Topbar = () => {
 
     const navigate = useNavigate();
-    const logout = (data) =>{
-            console.log(data);
-           localStorage.removeItem("token",(data.token));  
-           navigate('/login');        
+    const logout = (data) => {
+        console.log(data);
+        localStorage.removeItem("token", (data.token));
+        navigate('/login');
     }
     return (
         <>
@@ -52,22 +52,22 @@ const Topbar = () => {
                                     <Nav.Link href="#action1" className="icon-top"><IoMdNotificationsOutline style={{ fontSize: "30px" }} /></Nav.Link>
                                     <Nav.Link className='Profile-drop'>
                                         <Dropdown align="end">
-                                        <Dropdown.Toggle variant="inherit" id="dropdown-basic">
-                                            <img src={profileimg} className='profile-top' width="45px" alt="profile"></img>
-                                        </Dropdown.Toggle>
+                                            <Dropdown.Toggle variant="inherit" id="dropdown-basic">
+                                                <img src={profileimg} className='profile-top' width="45px" alt="profile"></img>
+                                            </Dropdown.Toggle>
 
-                                        <Dropdown.Menu className='Popup-inner'>
-                                            <div className="text-center border-bottom pt-3" >
-                                                <h6>Your Name</h6>
-                                                <p>Designation</p>
-                                            </div>
-                                            <Dropdown.Item href="/"><Link to="/"><MdOutlineAccountCircle style={{ padding: "10px", fontSize: "40px" }} />Profile</Link></Dropdown.Item>
-                                            <Dropdown.Item href="/"><Link to="/"><FiSettings style={{ padding: "10px", fontSize: "40px" }} />Settings</Link></Dropdown.Item>
-                                            <Dropdown.Item href="/"><Link to="/"><MdMailOutline style={{ padding: "10px", fontSize: "40px" }} />Messages</Link></Dropdown.Item>
-                                            <Dropdown.Item href="/"><Link to="/"><FiEdit2 style={{ padding: "10px", fontSize: "40px" }} />Change Password</Link></Dropdown.Item>
-                                            <Dropdown.Item ><AiOutlinePoweroff style={{ padding: "10px", fontSize: "40px" }} /><span onClick={logout}>Sign Out</span></Dropdown.Item>
-                                        </Dropdown.Menu>
-                                    </Dropdown></Nav.Link>
+                                            <Dropdown.Menu className='Popup-inner'>
+                                                <div className="text-center border-bottom pt-3" >
+                                                    <h6>Your Name</h6>
+                                                    <p>Designation</p>
+                                                </div>
+                                                <Dropdown.Item href="/"><Link to="/"><MdOutlineAccountCircle style={{ padding: "10px", fontSize: "40px" }} />Profile</Link></Dropdown.Item>
+                                                <Dropdown.Item href="/"><Link to="/"><FiSettings style={{ padding: "10px", fontSize: "40px" }} />Settings</Link></Dropdown.Item>
+                                                <Dropdown.Item href="/"><Link to="/"><MdMailOutline style={{ padding: "10px", fontSize: "40px" }} />Messages</Link></Dropdown.Item>
+                                                <Dropdown.Item href="/"><Link to="/"><FiEdit2 style={{ padding: "10px", fontSize: "40px" }} />Change Password</Link></Dropdown.Item>
+                                                <Dropdown.Item ><AiOutlinePoweroff style={{ padding: "10px", fontSize: "40px" }} /><span onClick={logout}>Sign Out</span></Dropdown.Item>
+                                            </Dropdown.Menu>
+                                        </Dropdown></Nav.Link>
                                 </div>
                                 <Navbar.Offcanvas
                                     id="offcanvasNavbar"

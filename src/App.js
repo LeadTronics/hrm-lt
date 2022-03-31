@@ -27,9 +27,9 @@ function App() {
           <Routes>
             <Route path='*' element={<Login />}></Route>
             <Route path='/login' element={<Login />} />
-            <Route path='/dashboard' element={<Dashboard/>}></Route>
+            <Route path='/dashboard' element={<Dashboard />}></Route>
             {/* <Route path='/addemployee' element={<Employee />} /> */}
-            <Route path='/addemployee' element={<EmployeeAdd />} />           
+            <Route path='/addemployee' element={<EmployeeAdd />} />
             <Route path='/interviewschedule' element={<InterviewSchedule />} />
             <Route path='/allemployee' element={<EmployeeList />} />
             <Route path='/interviewtabledata' element={<InterviewTableData />} />

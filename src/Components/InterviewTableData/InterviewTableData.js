@@ -33,30 +33,29 @@ const InterviewTableData = () => {
   }, []);
   //delete data
   const onDelete = (_id) => {
-     axios.delete(`${INTERVIEW_LIST}/${_id}`,{ headers: {"Authorization" : `Bearer ${JSON.parse(localStorage.getItem('token'))}`} })
-    .then(res => {
-      // console.log(res);
-      // console.log(res.data._id);
-      if(res.data.message === "Record Deleted Successfully")
-      {
-        swal({
-          title: "Are you sure?",
-          text: "Once deleted, you will not be able to recover this information!",
-          icon: "warning",
-          buttons: true,
-          dangerMode: true,
-        }).then((willDelete) => {
-          if (willDelete) {
-            navigate('/interviewtabledata'); 
-            swal("Record has been deleted!", {
-              icon: "success",
-            });
-          } else {
-            swal("Your imaginary file is safe!");
-          }
-        });
-      }
-    })
+    axios.delete(`${INTERVIEW_LIST}/${_id}`, { headers: { "Authorization": `Bearer ${JSON.parse(localStorage.getItem('token'))}` } })
+      .then(res => {
+        // console.log(res);
+        // console.log(res.data._id);
+        if (res.data.message === "Record Deleted Successfully") {
+          swal({
+            title: "Are you sure?",
+            text: "Once deleted, you will not be able to recover this information!",
+            icon: "warning",
+            buttons: true,
+            dangerMode: true,
+          }).then((willDelete) => {
+            if (willDelete) {
+              navigate('/interviewtabledata');
+              swal("Record has been deleted!", {
+                icon: "success",
+              });
+            } else {
+              swal("Your imaginary file is safe!");
+            }
+          });
+        }
+      })
   };
   //Search data filter from table API Data
   const [searchInput, setSearchInput] = useState("");
@@ -96,60 +95,63 @@ const InterviewTableData = () => {
     const endIndex = startIndex + dataLimit;
     return searchItems.slice(startIndex, endIndex);
   };
-// const nextbtn =()=>{
-//   if( postsPerPage!==  data.length)
-//   {
-//       console.log('No Data Found');
-//   }
-// }
-     //check filter
-    //  const [searchInputStatus, setSearchInputstatus] = useState("");
-    //  data.searchItems.filter((item) => {
-    //   if (setSearchInputstatus === "Hired") {
-    //     console.log("hired");
-    //     return Object.values(item)
-    //     .join("")
-    //     .toLowerCase()
-    //     .includes(searchInputStatus.toLowerCase());
-    //   } else {
-    //     return item;
-    //   }
-    // });
+  // const nextbtn =()=>{
+  //   if( postsPerPage!==  data.length)
+  //   {
+  //       console.log('No Data Found');
+  //   }
+  // }
+  //check filter
+  //  const [searchInputStatus, setSearchInputstatus] = useState("");
+  //  data.searchItems.filter((item) => {
+  //   if (setSearchInputstatus === "Hired") {
+  //     console.log("hired");
+  //     return Object.values(item)
+  //     .join("")
+  //     .toLowerCase()
+  //     .includes(searchInputStatus.toLowerCase());
+  //   } else {
+  //     return item;
+  //   }
+  // });
 
-    // ==============================
-    const arr =[
-      {
-      designation:"Software",
-      status:"Hired"
-      },
-      {
-        designation:"Lead Generation",
-        status:"Schedule"
-      },
-      {
-        designation:"Fullstack Developer",
-        status:"Rejected"
-      }
+  // ==============================
+  const arr = [
+    {
+      designation: "Software",
+      status: "Hired"
+    },
+    {
+      designation: "Lead Generation",
+      status: "Schedule"
+    },
+    {
+      designation: "Fullstack Developer",
+      status: "Rejected"
+    }
   ]
   //=====================
   console.log(arr.designation);
   const FilterData = (event) => {
-  const Allfilt =arr;
-     console.log(Allfilt);
+    const Allfilt = arr;
+    console.log(Allfilt);
 
-  const filtSche= arr.filter(function(arr) {
-      return arr.status === "Schedule" });
-      console.log(filtSche);
-  
-  const filtHire= arr.filter(function(arr){
-      return arr.status === "Hired"});
-      console.log(filtHire);
+    const filtSche = arr.filter(function (arr) {
+      return arr.status === "Schedule"
+    });
+    console.log(filtSche);
 
-  const filtRej= arr.filter(function(arr){
-      return arr.status === "Rejected"});
-      console.log(filtRej);
+    const filtHire = arr.filter(function (arr) {
+      return arr.status === "Hired"
+    });
+    console.log(filtHire);
+
+    const filtRej = arr.filter(function (arr) {
+      return arr.status === "Rejected"
+    });
+    console.log(filtRej);
   }
-//==========================
+  //==========================
   // const data1 = ["Hired","Schedule","Rejected"];
   //    const setSearchItems = useState(data);
   //    //console.log(setSearchItems);
@@ -175,16 +177,16 @@ const InterviewTableData = () => {
   //            default:
   //        }
   //    }
-  const interviewDateFilter =(event)=>{
-    switch (event) {
-      
-    }
-  };
-   const DesignationFilter=(event)=>{
+  const interviewDateFilter = (event) => {
     switch (event) {
 
     }
-   };
+  };
+  const DesignationFilter = (event) => {
+    switch (event) {
+
+    }
+  };
   return (
     <>
       <div className="interviewSchedule">
@@ -230,10 +232,10 @@ const InterviewTableData = () => {
                           </div>
                         </form>
                       </td>
-                      <td colSpan={1}>              
+                      <td colSpan={1}>
                       </td>
                       <td colSpan={2}>
-                      <Link to="/interview_schedule">
+                        <Link to="/interview_schedule">
                           <Button
                             classNames="allbtncss"
                             btnName="+ Add Interview"
@@ -251,7 +253,7 @@ const InterviewTableData = () => {
                       <td colSpan={1}></td>
                       <td colSpan={1}></td>
                       <td colSpan={1}>
-                      <form>
+                        <form>
                           <div className="d-flex justify-content-center align-items-center">
                             <input
                               type="search"
@@ -266,7 +268,7 @@ const InterviewTableData = () => {
                       </td>
                       <td colSpan={1}></td>
                       <td colSpan={1}>
-                      <form>
+                        <form>
                           <div className="d-flex justify-content-center align-items-center">
                             <input
                               type="search"
@@ -299,20 +301,20 @@ const InterviewTableData = () => {
                       </th> */}
                       <th className="tab_head text-center d-flex" scope="col">
                         Date Of Interview
-                      <div className="d-flex align-items-center">
-                       <select
-                         className="form-select select-filter"
-                         id="order-sort"
-                         onChange={(e) => interviewDateFilter(e.target.value)}
-                       >
-                         {/* <option value="01">Jan</option>
+                        <div className="d-flex align-items-center">
+                          <select
+                            className="form-select select-filter"
+                            id="order-sort"
+                            onChange={(e) => interviewDateFilter(e.target.value)}
+                          >
+                            {/* <option value="01">Jan</option>
                          <option value="02">Feb</option>
                          <option value="03">Mar</option>
                          <option value="04">Apr</option>
                          <option value="05">May</option>
                          <option value="06">June</option> */}
-                       </select>
-                      </div>
+                          </select>
+                        </div>
                       </th>
                       <th className="tab_head text-center" scope="col">
                         Time Of Interview
@@ -322,21 +324,21 @@ const InterviewTableData = () => {
                       </th> */}
                       <th className="tab_head text-center d-flex" scope="col">
                         Designation
-                      <div className="d-flex align-items-center">
-                       <select
-                         className="form-select select-filter"
-                         id="order-sort"
-                         onChange={(e) => DesignationFilter(e.target.value)}
-                       >
-                         <option value="Software Developer">Software Developer</option>
-                         <option value="Lead Generation Executive">Lead Generation Executive</option>
-                         <option value="Demand Generation Executive">Demand Generation Executive</option>
-                         <option value="Sales Executive">Sales Executive</option>
-                         <option value="FullStack Developer">FullStack Developer</option>
-                         <option value="Email Marketing Executive">Email Marketing Executive</option>
-                          <option value="Digital Marketing Executive">Digital Marketing Executive</option> 
-                       </select>
-                      </div>
+                        <div className="d-flex align-items-center">
+                          <select
+                            className="form-select select-filter"
+                            id="order-sort"
+                            onChange={(e) => DesignationFilter(e.target.value)}
+                          >
+                            <option value="Software Developer">Software Developer</option>
+                            <option value="Lead Generation Executive">Lead Generation Executive</option>
+                            <option value="Demand Generation Executive">Demand Generation Executive</option>
+                            <option value="Sales Executive">Sales Executive</option>
+                            <option value="FullStack Developer">FullStack Developer</option>
+                            <option value="Email Marketing Executive">Email Marketing Executive</option>
+                            <option value="Digital Marketing Executive">Digital Marketing Executive</option>
+                          </select>
+                        </div>
                       </th>
                       <th className="tab_head text-center" scope="col">
                         CV
@@ -344,13 +346,13 @@ const InterviewTableData = () => {
                       <th className="tab_head text-center d-flex" scope="col">
                         Status
                         <div className="d-flex align-items-center">
-                            <label className=" text-nowrap  me-2 text-white">Sort orders:</label>
-                                <select className="form-select select-filter" id="order-sort" onChange={(e) => FilterData(e.target.value)} >
-                                    <option value="All">All</option>
-                                    <option value="Hired">Hired</option>
-                                    <option value="Schedule">Schedule</option>
-                                    <option value="Rejected">Rejected</option>
-                                </select>
+                          <label className=" text-nowrap  me-2 text-white">Sort orders:</label>
+                          <select className="form-select select-filter" id="order-sort" onChange={(e) => FilterData(e.target.value)} >
+                            <option value="All">All</option>
+                            <option value="Hired">Hired</option>
+                            <option value="Schedule">Schedule</option>
+                            <option value="Rejected">Rejected</option>
+                          </select>
                         </div>
                       </th>
                       <th colSpan={2} className="text-center">
@@ -360,9 +362,9 @@ const InterviewTableData = () => {
                   </thead>
                   {/*------------------- table body------------ */}
                   <tbody>
-                       {/* Table lenght empty condition loader */}
-                       {data.length === 0 ? <div className="loader_table"></div> :""}  
-                    {getPaginatedData().map((item,i) => {
+                    {/* Table lenght empty condition loader */}
+                    {data.length === 0 ? <div className="loader_table"></div> : ""}
+                    {getPaginatedData().map((item, i) => {
                       return (
                         <>
                           <tr className="border-bottom">
@@ -375,7 +377,7 @@ const InterviewTableData = () => {
                                     fontWeight: "500",
                                   }}
                                 >
-                                  {i+1}
+                                  {i + 1}
                                 </span>
                               </div>
                             </td>
@@ -445,9 +447,9 @@ const InterviewTableData = () => {
                               </button>
                             </td>
                             <td className="text-end">
-                              <Link to={"/interviewupdate/"+item._id}>
+                              <Link to={"/interviewupdate/" + item._id}>
                                 <span className="action-button tableupdate_icon me-2">
-                                  <FaUserEdit/>
+                                  <FaUserEdit />
                                 </span>
                               </Link>
                               <span className="action-button tabledel_icon me-2">

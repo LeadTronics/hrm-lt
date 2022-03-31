@@ -10,10 +10,10 @@ const Pagination = React.memo((props) => {
     };
 
     function goToNextPage() {
-        if(props.currentPage){
+        if (props.currentPage) {
             props.setCurrentPage((page) => page + 1);
         }
-        else{
+        else {
             props.setCurrentPage("No Data Found");
         }
     }

@@ -1,15 +1,15 @@
-import React, {useState, useEffect} from 'react'
+import React, { useState, useEffect } from 'react'
 import './Dashboard.css'
 import { Doughnut } from 'react-chartjs-2'
-import {Chart, ArcElement} from 'chart.js'
+import { Chart, ArcElement } from 'chart.js'
 import { DASH_COUNT } from '../../endpoint'
 import axios from 'axios'
 Chart.register(ArcElement);
 
 const DoughnutChart = () => {
- 
+
   //GET dashboard data
-  
+
   const [male, setmale] = useState([]);
   const [female, setfemale] = useState([]);
   useEffect(() => {
@@ -21,60 +21,60 @@ const DoughnutChart = () => {
       setfemale(res.data.genderGraph.female)
     })
   }, [])
-    const data = {
-        labels: [
-          "Male",
-          "Female"
-        ],
-        datasets: [
-          {
-            data: [male,female],
-            backgroundColor: ["#36f", "#fe7f00"],
-            borderWidth: 0
-          }
-          
-        ]
-      };
-      const opt = {
-        responsive: true,
-        layout: {
-          padding: 0
+  const data = {
+    labels: [
+      "Male",
+      "Female"
+    ],
+    datasets: [
+      {
+        data: [male, female],
+        backgroundColor: ["#36f", "#fe7f00"],
+        borderWidth: 0
+      }
+
+    ]
+  };
+  const opt = {
+    responsive: true,
+    layout: {
+      padding: 0
+    },
+    plugins: {
+      tooltip: {
+        enabled: true
+      },
+      legend: {
+        position: "bottom",
+        onClick: null,
+        title: {
+          display: true,
+          text: " Employees ",
+          padding: 0,
+          color: "#566578"
         },
-        plugins: {
-          tooltip: {
-            enabled: true
-          },
-          legend: {
-            position: "bottom",
-            onClick: null,
-            title: {
-              display: true,
-              text: " Employees ",
-              padding: 0,
-              color: "#566578"
-            },
-            labels: {
-              usePointStyle: true,
-              pointStyle: "circle",
-              boxWidth: 6,
-              padding: 12
-            }
-          },
-          datalabels: {
-            color: "#fff",
-            font: {
-              size: "14px"
-            }
-          }
-        },
-        animation: true,
-        interaction: true,
-        radius: "80%",
-        cutout: "80%"
-      };
+        labels: {
+          usePointStyle: true,
+          pointStyle: "circle",
+          boxWidth: 6,
+          padding: 12
+        }
+      },
+      datalabels: {
+        color: "#fff",
+        font: {
+          size: "14px"
+        }
+      }
+    },
+    animation: true,
+    interaction: true,
+    radius: "80%",
+    cutout: "80%"
+  };
   return (
     <div>
-        <Doughnut data={data} options={opt} width={340} height={250} />
+      <Doughnut data={data} options={opt} width={340} height={250} />
     </div>
   )
 }

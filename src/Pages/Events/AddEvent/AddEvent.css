@@ -1,51 +1,60 @@
-.Heading{
+.Heading {
     margin-top: 90px;
     background: #f1f4fb;
     color: #263871;
     text-align: left !important;
     padding: 0px 25px 25px 25px;
 }
-.dashboard-header{
+
+.dashboard-header {
     padding: 5px 0px;
     font-size: 25px;
 }
-.btn-Wish{
+
+.btn-Wish {
     color: red;
     border: solid 1px red;
 }
-.cal-style{
-        margin: 10px;
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        gap: 20px;
-        /* height: 100vh; */
-        font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+
+.cal-style {
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    /* height: 100vh; */
+    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 }
-.react-calendar{
-    width:auto !important;
+
+.react-calendar {
+    width: auto !important;
     border: none !important;
-    padding: 20px 0px !important; 
+    padding: 20px 0px !important;
 }
-.react-calendar__navigation__label{
+
+.react-calendar__navigation__label {
     font-size: 25px;
     color: #36f;
     font-weight: 600;
 }
-.cal-style .card{
+
+.cal-style .card {
     padding: 15px 15px;
     border: none;
     border-radius: 10px;
 }
-.react-calendar__navigation__arrow{
+
+.react-calendar__navigation__arrow {
     margin: 5px !important;
     border-radius: 5px;
     color: white !important;
-    background-color: #36f !important ;
+    background-color: #36f !important;
 }
+
 abbr[title] {
     text-decoration: none;
 }
+
 .react-calendar__tile {
     max-width: 100%;
     padding: 10px 8px 60px 40px !important;
@@ -56,64 +65,76 @@ abbr[title] {
     color: #424e79 !important;
     font-size: 15px;
 }
+
 .react-calendar__tile--now {
-    background: #f1f5ff  !important;
+    background: #f1f5ff !important;
 }
+
 .react-calendar__month-view__days__day--weekend {
     background: rgba(241, 245, 255, .5) !important;
     color: #424e79 !important;
 }
+
 .cal-style .form-control:focus {
     border-color: none;
     box-shadow: none;
 }
+
 .modal-backdrop {
     position: fixed;
     top: 0;
     left: 0;
     z-index: 1050;
     width: 100vw;
-    height: 100vh; 
-	background: #fff; 
+    height: 100vh;
+    background: #fff;
 }
 
-.AddEvent-close-btn{
+.AddEvent-close-btn {
     position: absolute;
     top: 2px;
     right: 11px;
     background: transparent;
     box-shadow: none;
-    border: none;	
+    border: none;
 }
+
 .modal-content {
     border: none;
     box-shadow: 0px 1px 8px 0px #cccbcb;
 }
+
 .modal .modal-body {
-     padding: 20px;
+    padding: 20px;
 }
-.Button-AddEvent{
+
+.Button-AddEvent {
     background-color: #36f;
     color: white;
     padding: 6px 20px;
 }
-.Button-AddEvent:hover{
-    background-color: white ;
+
+.Button-AddEvent:hover {
+    background-color: white;
     color: #36f;
     border-color: #36f;
 }
+
 .addEventModal .btn-check:focus+.btn, .btn:focus {
     /* outline: 0; */
     box-shadow: none;
 }
+
 .addEventModal .form-control:focus {
     box-shadow: none;
     border-color: none;
 }
+
 .Upcoming-event-new .table {
     border-color: white;
 }
-.blockText1{
+
+.blockText1 {
     padding: 8px 5px;
     border-radius: 5px;
     text-align: center;
@@ -125,7 +146,8 @@ abbr[title] {
     color: blue;
     background: #e8eaf6;
 }
-.blockText2{
+
+.blockText2 {
     padding: 8px 5px;
     border-radius: 5px;
     text-align: center;
@@ -134,7 +156,7 @@ abbr[title] {
     height: fit-content;
     font-size: 13px;
     font-weight: 500;
-    color:#bf360c;
+    color: #bf360c;
     background: #ffcdd2ab;
 
 }

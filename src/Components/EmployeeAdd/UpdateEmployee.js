@@ -9,23 +9,23 @@ import Button from '../Button/Button';
 import { useForm } from "react-hook-form";
 import { EMPLOYEE_API } from '../../endpoint';
 import axios from 'axios';
-import {useParams } from 'react-router-dom'
+import { useParams } from 'react-router-dom'
 const UpdateEmployee = () => {
     const [Data, setData] = useState();
     const { id } = useParams();
 
     useEffect(() => {
-        axios.get(EMPLOYEE_API + "/" + id,{ headers: {"Authorization" : `Bearer ${JSON.parse(localStorage.getItem('token'))}`} })
-      .then(res => {
-          console.log(res.data);
-          setData(res.data);
-      })
-      .catch(err =>{
-          console.log(err)
-      })
+        axios.get(EMPLOYEE_API + "/" + id, { headers: { "Authorization": `Bearer ${JSON.parse(localStorage.getItem('token'))}` } })
+            .then(res => {
+                console.log(res.data);
+                setData(res.data);
+            })
+            .catch(err => {
+                console.log(err)
+            })
     }, [id])
-    
-     const { register, handleSubmit, reset, formState: { errors } } = useForm();
+
+    const { register, handleSubmit, reset, formState: { errors } } = useForm();
     const [selectedFile, setSelectedFile] = useState();
     const handleChange = (event) => {
         console.log(event.target.files[0])
@@ -60,11 +60,11 @@ const UpdateEmployee = () => {
     }
     return (
         <>
-            <div style={{ backgroundColor: '#f1f4fb'}}>
+            <div style={{ backgroundColor: '#f1f4fb' }}>
                 <Topbar />
                 <div className='addemp_martop'>
                     <div className='empadd_card'>
-                    <Row>
+                        <Row>
                             <Col className="perform_box">
                                 <h5 className='perform_head'>Add Employee Details</h5>
                                 <Form onSubmit={handleSubmit(onSubmit)}>
