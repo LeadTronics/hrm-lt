@@ -77,7 +77,7 @@ const InterviewSchedule = () => {
                                     <Col lg="6" md="6" sm="12" className="my-2">
                                         <div className="md-form mb-0">
                                             <label className='d-flex mx-2'>Name</label>
-                                            <input name='name' type="text" {...register("name", { required: true, maxLength: 20 })} className="form-control" placeholder='Your Name'
+                                            <input  type="text" {...register("name", { required: true, maxLength: 20 })} className="form-control" placeholder='Your Name'
                                             />
                                             <span className='form-error-login'>
                                                 {errors.name && "Please Enter Name."}
@@ -87,16 +87,16 @@ const InterviewSchedule = () => {
                                     <Col lg="6" md="6" sm="12" className="my-2">
                                         <div className="md-form mb-0">
                                             <label className='d-flex mx-2'>Email</label>
-                                            <input name="email" {...register("email", { required: true, maxLength: 30, pattern: { value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i, message: "invalid email address" } })} type="email" className="form-control" placeholder='Your Email' />
+                                            <input  {...register("email", { required: true, maxLength: 30, pattern: { value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i, message: "invalid email address" } })} type="email" className="form-control" placeholder='Your Email' />
 
                                             <span className='form-error-login'>
-                                                {errors.email && errors.email.type === "required" && <span>Please enter email this is required</span>}
+                                                {/* {errors.email && errors.email.type === "required" && <span>Please enter email this is required</span>}
                                                 {errors?.email?.type === "maxLength" && (
                                                     <p >email cannot exceed 30 characters</p>
                                                 )}
                                                 {errors?.email?.type === "pattern" && (
                                                     <p>Enter correct email including @</p>
-                                                )}
+                                                )} */}
                                             </span>
                                         </div>
                                     </Col>
@@ -105,12 +105,12 @@ const InterviewSchedule = () => {
                                     <Col lg="6" md="6" sm="12" className="my-2">
                                         <div className="md-form">
                                             <label className='d-flex mx-2'>Number</label>
-                                            <input name='phone' type="number" {...register("phone", { required: true, minLength: 10, maxLength: 12 })} className="form-control" placeholder='Your Phone number' />
+                                            <input  type="number" {...register("phone", { required: true, minLength: 10, maxLength: 12 })} className="form-control" placeholder='Your Phone number' />
                                             <span className='form-error-login'>
-                                                {errors.phone && "Please Enter Your Number."}
+                                                {/* {errors.phone && "Please Enter Your Number."}
                                                 {errors?.phone?.type === "maxLength" && (
                                                     <p >Number cannot exceed 12 characters</p>
-                                                )}
+                                                )} */}
                                             </span>
                                         </div>
                                     </Col>

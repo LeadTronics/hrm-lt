@@ -1,4 +1,4 @@
-import { React } from 'react'
+import  React from 'react'
 import './Topbar.css'
 import { FaBars } from 'react-icons/fa'
 import { FiSettings, FiEdit2 } from 'react-icons/fi'
@@ -22,6 +22,7 @@ const Topbar = () => {
         localStorage.removeItem("token", (data.token));
         navigate('/login');
     }
+
     return (
         <>
             <div className='Topbar'>
