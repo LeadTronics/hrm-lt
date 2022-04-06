@@ -1,4 +1,5 @@
 import React from 'react'
+import '../Components.css'
 import { Navbar, Nav } from 'react-bootstrap'
 
 const Topbar = () => {
@@ -6,6 +7,7 @@ const Topbar = () => {
         <div>
             <div className='container-fluid'>
                <Navbar>
+               <Navbar.Brand className="Dash-logo">HRM</Navbar.Brand>
                    <Nav.Link>Home</Nav.Link>
                </Navbar>
             </div>
