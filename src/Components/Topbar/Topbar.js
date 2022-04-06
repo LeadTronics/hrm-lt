@@ -1,15 +1,11 @@
 import React from 'react'
 import '../Components.css'
-import { Nav, NavDropdown, Navbar, Container, Dropdown } from 'react-bootstrap';
+import { Nav, Navbar, Container, Dropdown } from 'react-bootstrap';
 import { FaBars } from 'react-icons/fa'
 import { FiSettings, FiEdit2 } from 'react-icons/fi'
-import { MdMailOutline, MdPeopleAlt, MdOutlineAccountCircle } from 'react-icons/md'
-import { IoMdNotificationsOutline } from 'react-icons/io'
-import { RiTaskFill } from 'react-icons/ri'
+import { MdMailOutline, MdOutlineAccountCircle } from 'react-icons/md'
 import { AiTwotoneHome, AiFillCalendar, AiOutlinePoweroff } from 'react-icons/ai'
-import Form from 'react-bootstrap/Form'
-import { FormControl } from 'react-bootstrap';
-import profileimg from '../../assets/images/profile.jpg'
+import { IoMdNotificationsOutline } from 'react-icons/io'
 import { Link } from 'react-router-dom';
 
 
@@ -27,16 +23,16 @@ const Topbar = () => {
                                         HRM
                                     </Navbar.Brand>
                                     <Navbar.Toggle className='me-3'><FaBars /></Navbar.Toggle>
-                                    <Form className="d-flex ClasForm">
-                                        <FormControl
+                                    <form className="d-flex ClasForm">
+                                        <input
                                             type="search"
                                             placeholder="Search"
-                                            className="me-2"
+                                            className="me-2 form-control"
                                             style={{ margin: "5px" }}
                                             aria-label="Search"
                                         />
                                         <button style={{ margin: "5px" }} variant="outline-success">Search</button>
-                                    </Form>
+                                    </form>
                                 </div>
                                 <div className='d-flex justify-content-center align-items-center top-drop-icon'>
 
@@ -45,7 +41,7 @@ const Topbar = () => {
                                     <Nav.Link className='Profile-drop'>
                                         <Dropdown align="end">
                                             <Dropdown.Toggle variant="inherit" id="dropdown-basic">
-                                                <img src={profileimg} className='profile-top' width="45px" alt="profile"></img>
+                                                Image
                                             </Dropdown.Toggle>
 
                                             <Dropdown.Menu className='Popup-inner'>
