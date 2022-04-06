@@ -16,7 +16,7 @@ const Topbar = () => {
             <div className='Topbar'>
                 <div className='sidebar-text-top'>
                     <div className='row'>
-                        <Navbar style={{ backgroundColor: "#17263a" }} expand={false} fixed="top">
+                        <Navbar style={{ backgroundColor: "#17263a" }} >
                             <Container fluid>
                                 <div className='d-flex'>
                                     <Navbar.Brand href="#" className='Dash-logo'>
@@ -28,10 +28,9 @@ const Topbar = () => {
                                             type="search"
                                             placeholder="Search"
                                             className="me-2 form-control"
-                                            style={{ margin: "5px" }}
                                             aria-label="Search"
                                         />
-                                        <button style={{ margin: "5px" }} variant="outline-success">Search</button>
+                                        <button variant="outline-success">Search</button>
                                     </form>
                                 </div>
                                 <div className='d-flex justify-content-center align-items-center top-drop-icon'>
