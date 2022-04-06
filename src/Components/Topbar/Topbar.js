@@ -49,10 +49,10 @@ const Topbar = () => {
                                                     <h6>username</h6>
                                                     <p>Software Developer</p>
                                                 </div>
-                                                <Dropdown.Item><Link to="/"><MdOutlineAccountCircle style={{ padding: "10px", fontSize: "40px" }} />Profile</Link></Dropdown.Item>
-                                                <Dropdown.Item><Link to="/"><FiSettings style={{ padding: "10px", fontSize: "40px" }} />Settings</Link></Dropdown.Item>
-                                                <Dropdown.Item><Link to="/"><MdMailOutline style={{ padding: "10px", fontSize: "40px" }} />Messages</Link></Dropdown.Item>
-                                                <Dropdown.Item><Link to="/"><FiEdit2 style={{ padding: "10px", fontSize: "40px" }} />Change Password</Link></Dropdown.Item>
+                                                <Dropdown.Item><MdOutlineAccountCircle style={{ padding: "10px", fontSize: "40px" }} />Profile</Dropdown.Item>
+                                                <Dropdown.Item><FiSettings style={{ padding: "10px", fontSize: "40px" }} />Settings</Dropdown.Item>
+                                                <Dropdown.Item><MdMailOutline style={{ padding: "10px", fontSize: "40px" }} />Messages</Dropdown.Item>
+                                                <Dropdown.Item><FiEdit2 style={{ padding: "10px", fontSize: "40px" }} />Change Password</Dropdown.Item>
                                                 <Dropdown.Item><AiOutlinePoweroff style={{ padding: "10px", fontSize: "40px" }} /><span>Sign Out</span></Dropdown.Item>
                                             </Dropdown.Menu>
                                         </Dropdown></Nav.Link>
