@@ -1,64 +1,78 @@
-import React from 'react'
-import '../Components.css'
-import { Nav, Navbar, Dropdown } from 'react-bootstrap';
-import { FaBars } from 'react-icons/fa'
-import { MdMailOutline } from 'react-icons/md'
-import { IoMdNotificationsOutline } from 'react-icons/io'
+import React, { useState } from 'react'
+import { ProSidebar, Menu, MenuItem, SubMenu, SidebarFooter, SidebarHeader } from 'react-pro-sidebar';
+import 'react-pro-sidebar/dist/css/styles.css';
+import { MdPeopleAlt } from 'react-icons/md'
+import { AiTwotoneHome } from 'react-icons/ai'
+import { RiLogoutBoxRFill, RiTaskFill } from 'react-icons/ri'
+import { FaAngleDoubleRight, FaAngleDoubleLeft } from 'react-icons/fa'
+import { Link } from 'react-router-dom';
+import profileimg from '../../assets/images/profile.jpg'
+function Topbar() {
+    const [collapsed, setCollapsed] = useState(false);
 
-
-const Topbar = () => {
-
+    const onClickMenuIcon = () => {
+        setCollapsed(!collapsed);
+    };
     return (
         <>
-            <div className='Topbar'>
-                <div className='sidebar-text-top'>
-                    <div className='row'>
-                        <Navbar style={{ backgroundColor: "#17263a" }} >
-                        <div className='container-fluid'>
-                                <div className='d-flex'>
-                                    <Navbar.Brand href="#" className='Dash-logo'>
-                                        HRM
-                                    </Navbar.Brand>
-                                    <Navbar.Toggle className='me-3'><FaBars /></Navbar.Toggle>
-                                    <form className="d-flex ClasForm">
-                                        <input
-                                            type="search"
-                                            placeholder="Search"
-                                            className="me-2 form-control"
-                                            aria-label="Search"
-                                        />
-                                        <button variant="outline-success">Search</button>
-                                    </form>
-                                </div>
-                                <div className='d-flex top-drop-icon'>
+             <ProSidebar className='Sidebar-style' collapsed={collapsed}
+                breakPoint="md">
+                <div className='text-center'>
+                    <SidebarHeader className='Dash-logo border-Bgray'>
+                        {collapsed ? "HRM" : "Lead HRM"}
 
-                                    <Nav.Link href="#action1" className="icon-top"><MdMailOutline/></Nav.Link>
-                                    <Nav.Link href="#action1" className="icon-top"><IoMdNotificationsOutline/></Nav.Link>
-                                   
-                                        <Dropdown align="end">
-                                            <Dropdown.Toggle variant="inherit" id="dropdown-basic">
-                                                Image
-                                            </Dropdown.Toggle>
+                    </SidebarHeader>
+                    <div className='py-3 border-Bgray'>
+                        <img className='profile-side' src={profileimg} width="30%"></img>
+                        <div className='py-2'>
+                            <h5 className='text-white mb-0'>User Name</h5>
+                            <div>Designation</div>
+                        </div>
 
-                                            <Dropdown.Menu className='Popup-inner'>
-                                                <div className="text-center border-bottom pt-3" >
-                                                    <h6>username</h6>
-                                                    <p>Software Developer</p>
-                                                </div>
-                                                <Dropdown.Item>Profile</Dropdown.Item>
-                                                <Dropdown.Item>Settings</Dropdown.Item>
-                                                <Dropdown.Item>Messages</Dropdown.Item>
-                                                <Dropdown.Item>Change Password</Dropdown.Item>
-                                                <Dropdown.Item>Sign Out</Dropdown.Item>
-                                            </Dropdown.Menu>
-                                        </Dropdown>
-                                </div>
-                                </div>
-                        </Navbar>
                     </div>
                 </div>
-            </div>
+                <Menu iconShape="square">
+                    <MenuItem icon={<AiTwotoneHome style={{ color: "white" }} />}>Dashboard
+                        <Link to="/dashboard"></Link>
+                    </MenuItem>
+                    <SubMenu title="Employee" icon={<MdPeopleAlt style={{ color: "white" }} />}>
+                        <MenuItem style={{ listStyleType: "disc", marginLeft: "50px" }}>Employee List
+                            <Link to="/allemployee"></Link>
+                        </MenuItem>
+                        <MenuItem style={{ listStyleType: "disc", marginLeft: "50px" }}>Add Employee Details
+                            <Link to="/addemployee"></Link>
+                        </MenuItem>
+                    </SubMenu>
+                    <SubMenu title="Interview" icon={<RiTaskFill style={{ color: "white" }} />}>
+                        <MenuItem style={{ listStyleType: "disc", marginLeft: "50px" }}>Interview Schedule
+                            <Link to="/interview_schedule"></Link>
+                        </MenuItem>
+                        <MenuItem style={{ listStyleType: "disc", marginLeft: "50px" }}>Interview Schedule List
+                            <Link to='/interviewtabledata'></Link>
+                        </MenuItem>
+                        
+                    </SubMenu>
+                    <SubMenu title="Events" icon={<MdPeopleAlt style={{ color: "white" }} />}>
+                        <MenuItem style={{ listStyleType: "disc", marginLeft: "50px" }}>Add Event
+                            <Link to="/add-event"></Link>
+                        </MenuItem>
+                        <MenuItem style={{ listStyleType: "disc", marginLeft: "50px" }}>All Events
+                            <Link to="/all-events"></Link>
+                        </MenuItem>
+                    </SubMenu>
+                    
+                </Menu>
+                <SidebarFooter className='p-4' style={{ textAlign: "left" }}>
+                    <Link to="/login" className='btn' style={{ cursor: "pointer", fontWeight: "bold", color: "white" }}><RiLogoutBoxRFill /> Logout
+                    </Link>
+                    <br></br>
+                    <div style={{float:"left", margin:"10px", cursor:"pointer"}} onClick={onClickMenuIcon}>
+                        {collapsed ? <FaAngleDoubleRight /> : <FaAngleDoubleLeft />}
+                    </div>
+                </SidebarFooter>
+            </ProSidebar> 
+            
         </>
-    )
+    );
 }
-export default Topbar
+export default Topbar;
