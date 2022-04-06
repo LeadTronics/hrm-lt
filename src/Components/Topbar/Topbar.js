@@ -1,12 +1,9 @@
 import React from 'react'
 import '../Components.css'
-import { Nav, Navbar, Container, Dropdown } from 'react-bootstrap';
+import { Nav, Navbar, Dropdown } from 'react-bootstrap';
 import { FaBars } from 'react-icons/fa'
-import { FiSettings, FiEdit2 } from 'react-icons/fi'
-import { MdMailOutline, MdOutlineAccountCircle } from 'react-icons/md'
-import { AiOutlinePoweroff } from 'react-icons/ai'
+import { MdMailOutline } from 'react-icons/md'
 import { IoMdNotificationsOutline } from 'react-icons/io'
-import { Link } from 'react-router-dom';
 
 
 const Topbar = () => {
@@ -17,7 +14,7 @@ const Topbar = () => {
                 <div className='sidebar-text-top'>
                     <div className='row'>
                         <Navbar style={{ backgroundColor: "#17263a" }} >
-                            <Container fluid>
+                        <div className='container-fluid'>
                                 <div className='d-flex'>
                                     <Navbar.Brand href="#" className='Dash-logo'>
                                         HRM
@@ -56,7 +53,7 @@ const Topbar = () => {
                                             </Dropdown.Menu>
                                         </Dropdown></Nav.Link>
                                 </div>
-                            </Container>
+                                </div>
                         </Navbar>
                     </div>
                 </div>
