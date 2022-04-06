@@ -4,7 +4,7 @@ import { Nav, Navbar, Container, Dropdown } from 'react-bootstrap';
 import { FaBars } from 'react-icons/fa'
 import { FiSettings, FiEdit2 } from 'react-icons/fi'
 import { MdMailOutline, MdOutlineAccountCircle } from 'react-icons/md'
-import { AiTwotoneHome, AiFillCalendar, AiOutlinePoweroff } from 'react-icons/ai'
+import { AiOutlinePoweroff } from 'react-icons/ai'
 import { IoMdNotificationsOutline } from 'react-icons/io'
 import { Link } from 'react-router-dom';
 
@@ -49,11 +49,11 @@ const Topbar = () => {
                                                     <h6>username</h6>
                                                     <p>Software Developer</p>
                                                 </div>
-                                                <Dropdown.Item href="/"><Link to="/"><MdOutlineAccountCircle style={{ padding: "10px", fontSize: "40px" }} />Profile</Link></Dropdown.Item>
-                                                <Dropdown.Item href="/"><Link to="/"><FiSettings style={{ padding: "10px", fontSize: "40px" }} />Settings</Link></Dropdown.Item>
-                                                <Dropdown.Item href="/"><Link to="/"><MdMailOutline style={{ padding: "10px", fontSize: "40px" }} />Messages</Link></Dropdown.Item>
-                                                <Dropdown.Item href="/"><Link to="/"><FiEdit2 style={{ padding: "10px", fontSize: "40px" }} />Change Password</Link></Dropdown.Item>
-                                                <Dropdown.Item ><AiOutlinePoweroff style={{ padding: "10px", fontSize: "40px" }} /><span>Sign Out</span></Dropdown.Item>
+                                                <Dropdown.Item><Link to="/"><MdOutlineAccountCircle style={{ padding: "10px", fontSize: "40px" }} />Profile</Link></Dropdown.Item>
+                                                <Dropdown.Item><Link to="/"><FiSettings style={{ padding: "10px", fontSize: "40px" }} />Settings</Link></Dropdown.Item>
+                                                <Dropdown.Item><Link to="/"><MdMailOutline style={{ padding: "10px", fontSize: "40px" }} />Messages</Link></Dropdown.Item>
+                                                <Dropdown.Item><Link to="/"><FiEdit2 style={{ padding: "10px", fontSize: "40px" }} />Change Password</Link></Dropdown.Item>
+                                                <Dropdown.Item><AiOutlinePoweroff style={{ padding: "10px", fontSize: "40px" }} /><span>Sign Out</span></Dropdown.Item>
                                             </Dropdown.Menu>
                                         </Dropdown></Nav.Link>
                                 </div>
