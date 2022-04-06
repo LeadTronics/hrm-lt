@@ -9,7 +9,17 @@ const Topbar = () => {
                 <Navbar expand={false}>
                     <div className='d-flex'>
                     <Navbar.Brand className="Dash-logo">HRM</Navbar.Brand>
-                    <Nav.Link>Home</Nav.Link>
+                    {/* <Nav.Link>Home</Nav.Link> */}
+                    <form className="d-flex">
+                                        <input
+                                            type="search"
+                                            placeholder="Search"
+                                            className="me-2 form-control"
+                                            style={{ margin: "5px" }}
+                                            aria-label="Search"
+                                        />
+                                        <button style={{ margin: "5px" }} variant="outline-success">Search</button>
+                                    </form>
                     </div>
                     
 
