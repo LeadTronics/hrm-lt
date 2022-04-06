@@ -1,5 +1,4 @@
 import React from 'react'
-import Topbar from '../../Components/Topbar/Topbar'
 import Header from '../../Components/Header/Header'
 
 const Dashboard = () => {
