@@ -30,11 +30,11 @@ const Topbar = () => {
                                         <button variant="outline-success">Search</button>
                                     </form>
                                 </div>
-                                <div className='d-flex justify-content-center align-items-center top-drop-icon'>
+                                <div className='d-flex top-drop-icon'>
 
                                     <Nav.Link href="#action1" className="icon-top"><MdMailOutline/></Nav.Link>
                                     <Nav.Link href="#action1" className="icon-top"><IoMdNotificationsOutline/></Nav.Link>
-                                    <Nav.Link className='Profile-drop'>
+                                   
                                         <Dropdown align="end">
                                             <Dropdown.Toggle variant="inherit" id="dropdown-basic">
                                                 Image
@@ -51,7 +51,7 @@ const Topbar = () => {
                                                 <Dropdown.Item>Change Password</Dropdown.Item>
                                                 <Dropdown.Item>Sign Out</Dropdown.Item>
                                             </Dropdown.Menu>
-                                        </Dropdown></Nav.Link>
+                                        </Dropdown>
                                 </div>
                                 </div>
                         </Navbar>
