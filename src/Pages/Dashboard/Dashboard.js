@@ -6,7 +6,7 @@ const Dashboard = () => {
     return (
         <div className='dashboard'>
             <div className='sidebar-text-content'>
-                <Topbar />
+               
                 <div className='Page-Content'>
                     <Header HeadingName="HR" MutedHeadName="  Dashboard" />
                 </div>
