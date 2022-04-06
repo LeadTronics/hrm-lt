@@ -1,16 +1,43 @@
 .Dash-logo {
-    font-size: 30px;
-    padding: 0px 0px;
-    padding: 0px 80px;
-    color: white !important;
-  }
-  .profile-top{
-    border-radius: 50%;
-  }
-  .Navbar-Style{
-    background-color: #17263a;
-    color: white !important;
-  }
-  .nav-link{
-    color: white !important;
-  }
+  font-size: 30px;
+  padding: 0px 0px;
+  padding: 0px 80px;
+  color: white !important;
+}
+
+.profile-top {
+  border-radius: 50%;
+}
+
+.Navbar-Style {
+  background-color: #17263a;
+  color: white !important;
+}
+
+.nav-link {
+  color: white !important;
+}
+
+.offcanvas.show {
+  background: #17263a;
+}
+
+.offcanvas-start {
+  width: 260px;
+}
+
+.offcanvas-body {
+  padding: 0;
+}
+
+.nav-link {
+  color: #aab3cc;
+}
+
+.offcanvas-backdrop.show {
+  opacity: 0;
+}
+
+.offcanvas-header {
+  color: white;
+}

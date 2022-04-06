@@ -1,6 +1,6 @@
 import React from 'react'
 import '../Components.css'
-import { Navbar, Nav, NavDropdown } from 'react-bootstrap'
+import { Navbar, Nav, NavDropdown, OffcanvasBody } from 'react-bootstrap'
 import profile from '../../assets/images/profile.jpg'
 import Offcanvas from 'react-bootstrap/Offcanvas'
 
@@ -34,15 +34,14 @@ const Topbar = () => {
                 <Navbar.Offcanvas
                     id="offcanvasNavbar"
                     aria-labelledby="offcanvasNavbarLabel"
-                    placement="start"
-                >
+                    placement="start">
                     <Offcanvas.Header closeButton>
                         <Offcanvas.Title id="offcanvasNavbarLabel" className='text-center'>
                         </Offcanvas.Title>
-
                     </Offcanvas.Header>
-
-                    
+                    <OffcanvasBody>
+                        <h1 className='text-center text-white'>HRM</h1>
+                    </OffcanvasBody>
                 </Navbar.Offcanvas>
             </Navbar>
         </div>
