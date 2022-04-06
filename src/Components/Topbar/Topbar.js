@@ -36,8 +36,8 @@ const Topbar = () => {
                                 </div>
                                 <div className='d-flex justify-content-center align-items-center top-drop-icon'>
 
-                                    <Nav.Link href="#action1" className="icon-top"><MdMailOutline style={{ fontSize: "30px" }} /></Nav.Link>
-                                    <Nav.Link href="#action1" className="icon-top"><IoMdNotificationsOutline style={{ fontSize: "30px" }} /></Nav.Link>
+                                    <Nav.Link href="#action1" className="icon-top"><MdMailOutline/></Nav.Link>
+                                    <Nav.Link href="#action1" className="icon-top"><IoMdNotificationsOutline/></Nav.Link>
                                     <Nav.Link className='Profile-drop'>
                                         <Dropdown align="end">
                                             <Dropdown.Toggle variant="inherit" id="dropdown-basic">
@@ -49,11 +49,11 @@ const Topbar = () => {
                                                     <h6>username</h6>
                                                     <p>Software Developer</p>
                                                 </div>
-                                                <Dropdown.Item><MdOutlineAccountCircle style={{ padding: "10px", fontSize: "40px" }} />Profile</Dropdown.Item>
-                                                <Dropdown.Item><FiSettings style={{ padding: "10px", fontSize: "40px" }} />Settings</Dropdown.Item>
-                                                <Dropdown.Item><MdMailOutline style={{ padding: "10px", fontSize: "40px" }} />Messages</Dropdown.Item>
-                                                <Dropdown.Item><FiEdit2 style={{ padding: "10px", fontSize: "40px" }} />Change Password</Dropdown.Item>
-                                                <Dropdown.Item><AiOutlinePoweroff style={{ padding: "10px", fontSize: "40px" }} /><span>Sign Out</span></Dropdown.Item>
+                                                <Dropdown.Item>Profile</Dropdown.Item>
+                                                <Dropdown.Item>Settings</Dropdown.Item>
+                                                <Dropdown.Item>Messages</Dropdown.Item>
+                                                <Dropdown.Item>Change Password</Dropdown.Item>
+                                                <Dropdown.Item>Sign Out</Dropdown.Item>
                                             </Dropdown.Menu>
                                         </Dropdown></Nav.Link>
                                 </div>
