@@ -23,16 +23,7 @@ const Dashboard = () => {
         axios.get(DASH_COUNT, { headers: { "Authorization": `Bearer ${user}` } }).then(res => {
             setTotalData(res.data);
         })
-        setLoader(true)
-        try {
-            axios.get(EVENTS, { headers: { "Authorization": `Bearer ${user}` } }).then(res => {
-                setEvents(res.data);
-                setLoader(false)
-            })
-        } catch (error) {
-            console.warn(error)
-            setLoader(true)
-        }
+        
         axios.get(EMPLOYEE_API, { headers: { Authorization: `Bearer ${user}` } })
             .then((res) => {
                 setData(res.data);
@@ -128,7 +119,7 @@ const Dashboard = () => {
                                     <div className="table-responsive recent_jobs pt-2 pb-2 pl-2 pr-2" style={{ height: "290px" }}>
                                         <table className="table mb-0 text-nowrap ">
                                             <tbody>
-                                                {
+                                                {/* {
                                                     events.map((d, index2) => {
                                                         return (
                                                             <tr className="d-table-row justify-content-center align-items-center align-content-center " key={index2}>
@@ -144,7 +135,7 @@ const Dashboard = () => {
                                                             </tr>
                                                         );
                                                     })
-                                                }
+                                                } */}
                                             </tbody>
                                         </table>
                                     </div>
