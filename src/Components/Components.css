@@ -86,3 +86,8 @@
   color: #fff;
   background: linear-gradient(0deg, #36f 0%, rgba(129, 5, 240, 1) 100%);
 }
+/* ////////////Header/////////// */
+.dashboard-header {
+  padding: 5px 0px;
+  font-size: 25px;
+}
