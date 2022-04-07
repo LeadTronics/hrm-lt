@@ -2,10 +2,9 @@ import React, { useEffect, useState } from 'react'
 import './Dashboard.css'
 import Topbar from '../../Components/Topbar/Topbar'
 import Header from '../../Components/Header/Header'
-import { EMPLOYEE_API, INTERVIEW_LIST } from '../../endpoint'
+import { EMPLOYEE_API, INTERVIEW_LIST} from '../../endpoint'
 import axios from 'axios'
-import { AiFillMail } from 'react-icons/ai'
-import { BiPhoneCall } from 'react-icons/bi'
+
 const Dashboard = () => {
 
     const [Data, setData] = useState([])
@@ -32,6 +31,7 @@ const Dashboard = () => {
                 SetLoader(false)
             }
         })();
+     
     }, [])
 
 
@@ -74,10 +74,10 @@ const Dashboard = () => {
                                                             <td className="text-left fs-13">{d.department}</td>
                                                             <td className="text-end">
                                                                 <a href={`mailto:${d.email}`}>
-                                                                    <span className='action-button btn-mail me-2'><AiFillMail /></span>
+                                                                    <span className='action-button btn-mail me-2'>Mail</span>
                                                                 </a>
                                                                 <a href={`tel:${d.phone}`}>
-                                                                    <span className='action-button btn-call me-2'><BiPhoneCall /></span>
+                                                                    <span className='action-button btn-call me-2'>Call</span>
                                                                 </a>
                                                             </td>
                                                         </tr>
@@ -117,10 +117,10 @@ const Dashboard = () => {
                                                     <td className="text-left fs-13">{d.interviewTime}</td>
                                                     <td className="text-end">
                                                         <a href={`mailto:${d.email}`}>
-                                                            <span className='action-button btn-mail me-2'><AiFillMail /></span>
+                                                            <span className='action-button btn-mail me-2'>Mail</span>
                                                         </a>
                                                         <a href={`tel:${d.phone}`}>
-                                                            <span className='action-button btn-call me-2'><BiPhoneCall /></span>
+                                                            <span className='action-button btn-call me-2'>Call</span>
                                                         </a>
                                                     </td>
                                                 </tr>
