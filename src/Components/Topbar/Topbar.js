@@ -3,6 +3,7 @@ import '../Components.css'
 import { Navbar, Nav, NavDropdown, OffcanvasBody } from 'react-bootstrap'
 import profile from '../../assets/images/profile.jpg'
 import Offcanvas from 'react-bootstrap/Offcanvas'
+import {FaBars} from 'react-icons/fa'
 
 const Topbar = () => {
     return (
@@ -10,7 +11,7 @@ const Topbar = () => {
             <Navbar expand={false}>
                 <div className='d-flex'>
                     <Navbar.Brand className="Dash-logo">HRM</Navbar.Brand>
-                    <Navbar.Toggle className='me-3'>AM</Navbar.Toggle>
+                    <Navbar.Toggle className='me-3'><FaBars /></Navbar.Toggle>
                     <form className="d-flex">
                         <input
                             type="search"
