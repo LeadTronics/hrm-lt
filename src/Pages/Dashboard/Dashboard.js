@@ -91,27 +91,7 @@ const Dashboard = () => {
                                 <div className='card Upcoming-table-dash'>
                                     <h6>Events In This Month</h6>
                                     <div className="table-responsive recent_jobs pt-2 pb-2 pl-2 pr-2" style={{ height: "290px" }}>
-                                        <table className="table mb-0 text-nowrap ">
-                                            <tbody>
-                                                {/* {
-                                                    events.map((d, index2) => {
-                                                        return (
-                                                            <tr className="d-table-row justify-content-center align-items-center align-content-center " key={index2}>
-                                                                <td>
-                                                                    <div className={index2 % 2 === 0 ? "blockText1" : "blockText2"} >
-                                                                        
-                                                                    </div>
-                                                                </td>
-                                                                <td className="text-left">
-                                                                    <div><h6 className='mb-0'>{d.eventTitle}</h6></div>
-                                                                    <div style={{ fontSize: "13px" }}>{d.eventDesc}</div>
-                                                                </td>
-                                                            </tr>
-                                                        );
-                                                    })
-                                                } */}
-                                            </tbody>
-                                        </table>
+                                        
                                     </div>
                                 </div>
                             </div>
@@ -134,18 +114,7 @@ const Dashboard = () => {
                             <div className="card">
                                 <h6 className='mb-1'>Recently Joined Employees</h6>
                                 <div className="table-responsive recent_jobs pt-2 pb-2 pl-2 pr-2" style={{ height: "420px" }}>
-                                    <table className="table mb-0 text-nowrap">
-                                        <tbody>
-                                            <tr className="border-bottom d-table-row gray-color">
-                                                <th className="text-left">Name</th>
-                                                <th className="text-left">Joining Date</th>
-                                                <th className="text-left">Department</th>
-                                                <th className="text-center">Actions</th>
-                                            </tr>
-                                            {/* //////////////////// */}
-                                            
-                                        </tbody>
-                                    </table>
+                                    
                                 </div>
                             </div>
 
@@ -155,19 +124,7 @@ const Dashboard = () => {
                                 <h6 className='mb-1'>Interview List</h6>
 
                                 <div className="table-responsive recent_jobs pt-2 pb-2 pl-2 pr-2" style={{ height: "420px" }}>
-                                    <table className="table mb-0 text-nowrap">
-                                        <tbody>
-                                            <tr className='gray-color border-bottom d-table-row'>
-                                                <th className="text-left">Name</th>
-                                                <th className="text-left">Interview Date</th>
-                                                <th className='text-left'>Time</th>
-                                                <th className="text-center">Actions</th>
-                                            </tr>
-                                            {/* //////////////////// */}
-                                            
-                                            {/* //////////////////// */}
-                                        </tbody>
-                                    </table>
+                                   
                                 </div>
                             </div>
                         </div>
