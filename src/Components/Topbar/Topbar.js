@@ -12,7 +12,7 @@ const Topbar = () => {
             <Navbar expand={false}>
                 <div className='d-flex'>
                     <Navbar.Brand className="Dash-logo">HRM</Navbar.Brand>
-                    <Navbar.Toggle className='me-3'>Btn</Navbar.Toggle>
+                    <Navbar.Toggle className='me-3'><i className="fa-solid fa fa-bars"></i></Navbar.Toggle>
                     <form className="d-flex">
                         <input
                             type="search"
@@ -56,15 +56,15 @@ const Topbar = () => {
                                         </div>
                                         <Nav style={{padding:"10px 35px"}}>
                                             <Nav.Link href="/dashboard"><i className='fa fa-home me-2'></i>Dashboard</Nav.Link>
-                                            <NavDropdown title="Employee" id="offcanvasNavbarDropdown">
+                                            <NavDropdown title={<span><i className="fa-solid fa fa-user me-2"></i>Employee</span>} id="offcanvasNavbarDropdown">
                                                 <NavDropdown.Item><Link to="/allemployee">Employee List</Link></NavDropdown.Item>
                                                 <NavDropdown.Item><Link to="/addemployee">Add Employee Details</Link></NavDropdown.Item>
                                             </NavDropdown>
-                                            <NavDropdown title="Interview" id="offcanvasNavbarDropdown">
+                                            <NavDropdown title={<span><i class="fa-solid fa fa-file me-2"></i>Interview</span>} id="offcanvasNavbarDropdown">
                                                 <NavDropdown.Item><Link to="/interviewschedule">Interview Schedule</Link></NavDropdown.Item>
                                                 <NavDropdown.Item><Link to="/interviewtabledata">Interview Schedule List</Link></NavDropdown.Item>
                                             </NavDropdown>
-                                            <NavDropdown title="Events" id="offcanvasNavbarDropdown">
+                                            <NavDropdown title={<span><i className="fa-solid fa fa-calendar-check me-2"></i>Events</span>} id="offcanvasNavbarDropdown">
                                                 <NavDropdown.Item><Link to="/add-event">Add Event</Link></NavDropdown.Item>
                                                 <NavDropdown.Item><Link to="/all-events">All Events</Link></NavDropdown.Item>
                                             </NavDropdown>

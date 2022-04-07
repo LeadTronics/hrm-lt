@@ -74,10 +74,10 @@ const Dashboard = () => {
                                                             <td className="text-left fs-13">{d.department}</td>
                                                             <td className="text-end">
                                                                 <a href={`mailto:${d.email}`}>
-                                                                    <span className='action-button btn-mail me-2'>Mail</span>
+                                                                    <span className='action-button btn-mail me-2'><i className="fa-solid fa fa-envelope"></i></span>
                                                                 </a>
                                                                 <a href={`tel:${d.phone}`}>
-                                                                    <span className='action-button btn-call me-2'>Call</span>
+                                                                    <span className='action-button btn-call me-2'><i className="fa-solid fa fa-phone"></i></span>
                                                                 </a>
                                                             </td>
                                                         </tr>
@@ -117,10 +117,10 @@ const Dashboard = () => {
                                                     <td className="text-left fs-13">{d.interviewTime}</td>
                                                     <td className="text-end">
                                                         <a href={`mailto:${d.email}`}>
-                                                            <span className='action-button btn-mail me-2'>Mail</span>
+                                                            <span className='action-button btn-mail me-2'><i className="fa-solid fa fa-envelope"></i></span>
                                                         </a>
                                                         <a href={`tel:${d.phone}`}>
-                                                            <span className='action-button btn-call me-2'>Call</span>
+                                                            <span className='action-button btn-call me-2'><i className="fa-solid fa fa-phone"></i></span>
                                                         </a>
                                                     </td>
                                                 </tr>
