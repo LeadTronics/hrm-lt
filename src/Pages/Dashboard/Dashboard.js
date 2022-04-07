@@ -8,37 +8,11 @@ import { BiPhoneCall } from 'react-icons/bi'
 // import LineChart from './LineChart'
 import Topbar from '../../Components/Topbar/Topbar'
 // import FooterBar from '../../Components/Footer/Footer'
-import { DASH_COUNT, EVENTS, EMPLOYEE_API, INTERVIEW_LIST } from '../../endpoint'
-import axios from 'axios'
 import Header from '../../Components/Header/Header'
 const Dashboard = () => {
 
-    const [events, setEvents] = useState([]);
-    const [data, setData] = useState([]);
-    const [interview, setinterview] = useState([]);
-    const [totalData, setTotalData] = useState([]);
-    const [Loder, setLoader] = useState(false)
-    useEffect(() => {
-        const user = JSON.parse(localStorage.getItem('token'));
-        axios.get(DASH_COUNT, { headers: { "Authorization": `Bearer ${user}` } }).then(res => {
-            setTotalData(res.data);
-        })
-        
-        axios.get(EMPLOYEE_API, { headers: { Authorization: `Bearer ${user}` } })
-            .then((res) => {
-                setData(res.data);
-            })
-            .catch((err) => {
-                console.log(err);
-            });
-        axios.get(INTERVIEW_LIST, { headers: { Authorization: `Bearer ${user}` } })
-            .then((res) => {
-                setinterview(res.data);
-            })
-            .catch((err) => {
-                console.log(err);
-            });
-    }, [])
+    
+    
 
     return (
         <div className='dashboard'>
@@ -55,10 +29,10 @@ const Dashboard = () => {
                                             <div className='row d-flex justify-content-center align-items-center'>
                                                 <div className='col-lg-8'>
                                                     <h6 className="mb-0">Total Employees</h6>
-                                                    <h2>{totalData.employee}</h2>
+                                                    <h2>totalData.employee</h2>
                                                     <span className='text-muted'>
                                                         <BsFillArrowUpRightCircleFill className='me-2' style={{ color: '#0dcd94' }} />
-                                                        <span className='me-2' style={{ color: '#0dcd94' }}>{totalData.employee}</span>
+                                                        <span className='me-2' style={{ color: '#0dcd94' }}>totalData.employee</span>
                                                         for last month
                                                     </span>
                                                 </div>
@@ -71,10 +45,10 @@ const Dashboard = () => {
                                             <div className='row d-flex justify-content-center align-items-center'>
                                                 <div className='col-lg-8'>
                                                     <h6 className="mb-0">Total Job Applications</h6>
-                                                    <h2>{totalData.candidate}</h2>
+                                                    <h2>totalData.candidate</h2>
                                                     <span className='text-muted'>
                                                         <BsFillArrowUpRightCircleFill className='me-2' style={{ color: '#36f' }} />
-                                                        <span className='me-2' style={{ color: '#36f' }}>{totalData.candidate}</span>
+                                                        <span className='me-2' style={{ color: '#36f' }}>totalData.candidate</span>
                                                         for last month
                                                     </span>
                                                 </div>
@@ -87,10 +61,10 @@ const Dashboard = () => {
                                             <div className='row d-flex justify-content-center align-items-center'>
                                                 <div className='col-lg-8'>
                                                     <h6 className="mb-0">Total Events</h6>
-                                                    <h2>{totalData.events}</h2>
+                                                    <h2>totalData.events</h2>
                                                     <span className='text-muted'>
                                                         <BsFillArrowUpRightCircleFill className='me-2' style={{ color: '#fe7f00' }} />
-                                                        <span className='me-2' style={{ color: '#fe7f00' }}>{totalData.events}</span>
+                                                        <span className='me-2' style={{ color: '#fe7f00' }}>totalData.events</span>
                                                         for last month
                                                     </span>
                                                 </div>
@@ -147,7 +121,7 @@ const Dashboard = () => {
                                     <div>
                                         {/* <DoughnutChart /> */}
                                         <div className='overlayChart'>
-                                            Total Employees<br />{data.length}
+                                            Total Employees<br />data.length
                                         </div>
                                     </div>
                                 </div>
@@ -169,29 +143,7 @@ const Dashboard = () => {
                                                 <th className="text-center">Actions</th>
                                             </tr>
                                             {/* //////////////////// */}
-                                            {data.slice(0, 5).map((d, i) => (
-                                                <tr className="border-bottom d-table-row justify-content-center align-items-center align-content-center" key={i}>
-                                                    <td>
-                                                        <div className="d-flex align-items-center">
-                                                            <img src={d.profile} alt="img" className="avatar avatar-md brround me-3" />
-                                                            <div className="mr-3 mt-0 mt-sm-1 d-block">
-                                                                <h6 className="mb-0 text-left">{d.name}</h6>
-                                                                <small className="text-muted">{d.designation}</small>
-                                                            </div>
-                                                        </div>
-                                                    </td>
-                                                    <td className="text-left fs-13">{d.joiningDate}</td>
-                                                    <td className="text-left fs-13">{d.department}</td>
-                                                    <td className="text-end">
-                                                        <a href={`mailto:${d.email}`}>
-                                                            <span className='action-button btn-mail me-2'><AiOutlineMail /></span>
-                                                        </a>
-                                                        <a href={`tel:${d.phone}`}>
-                                                            <span className='action-button btn-call me-2'><BiPhoneCall /></span>
-                                                        </a>
-                                                    </td>
-                                                </tr>
-                                            ))}
+                                            
                                         </tbody>
                                     </table>
                                 </div>
@@ -212,28 +164,7 @@ const Dashboard = () => {
                                                 <th className="text-center">Actions</th>
                                             </tr>
                                             {/* //////////////////// */}
-                                            {interview.length === 0 ? <tr>No data found</tr> : interview.slice(0, 5).map((d, ind) => (
-                                                <tr className="border-bottom d-table-row justify-content-center align-items-center align-content-center" key={ind}>
-                                                    <td>
-                                                        <div className="d-flex align-items-center">
-                                                            <div className="mr-3 mt-0 mt-sm-1 d-block">
-                                                                <h6 className="mb-0">{d.name}</h6>
-                                                                <small className="text-muted">{d.designation}</small>
-                                                            </div>
-                                                        </div>
-                                                    </td>
-                                                    <td className="text-left fs-13">{d.interviewDate}</td>
-                                                    <td className="text-left fs-13">{d.interviewTime}</td>
-                                                    <td className="text-end">
-                                                        <a href={`mailto:${d.email}`}>
-                                                            <span className='action-button btn-mail me-2'><AiOutlineMail /></span>
-                                                        </a>
-                                                        <a href={`tel:${d.phone}`}>
-                                                            <span className='action-button btn-call me-2'><BiPhoneCall /></span>
-                                                        </a>
-                                                    </td>
-                                                </tr>
-                                            ))}
+                                            
                                             {/* //////////////////// */}
                                         </tbody>
                                     </table>
