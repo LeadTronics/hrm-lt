@@ -3,7 +3,11 @@ import '../Components.css'
 import { Navbar, Nav, NavDropdown, OffcanvasBody } from 'react-bootstrap'
 import profile from '../../assets/images/profile.jpg'
 import Offcanvas from 'react-bootstrap/Offcanvas'
-import {FaBars} from 'react-icons/fa'
+import { FaBars } from 'react-icons/fa'
+import {AiTwotoneHome, AiFillCalendar}  from 'react-icons/ai'
+import {MdPeopleAlt} from 'react-icons/md'
+import { Link } from 'react-router-dom'
+import {RiTaskFill} from 'react-icons/ri'
 
 const Topbar = () => {
     return (
@@ -40,9 +44,32 @@ const Topbar = () => {
                         <Offcanvas.Title id="offcanvasNavbarLabel" className='text-center'>
                         </Offcanvas.Title>
                     </Offcanvas.Header>
-                    <OffcanvasBody>
-                        <h1 className='text-center text-white'>HRM</h1>
-                    </OffcanvasBody>
+                    <Offcanvas.Body>
+                        <h1 style={{ color: "white", textAlign: "center" }}>HRM</h1>
+                        <div className='py-3 border-Bgray text-center'>
+                           
+                            <div className='py-2'>
+                                <h5 className='text-white mb-0'>username</h5>
+                                <div className='text-muted'>Software Developer</div>
+                            </div>
+
+                        </div>
+                        <Nav style={{ padding: "10px 35px" }}>
+                            <Nav.Link href="/dashboard"><AiTwotoneHome style={{ color: "#aab3cc", marginRight: "10px" }} />Dashboard</Nav.Link>
+                            <NavDropdown title={<span><MdPeopleAlt style={{ color: "#aab3cc", marginRight: "10px" }} />Employee</span>} id="offcanvasNavbarDropdown">
+                                <NavDropdown.Item><Link to="/allemployee">Employee List</Link></NavDropdown.Item>
+                                <NavDropdown.Item><Link to="/addemployee">Add Employee Details</Link></NavDropdown.Item>
+                            </NavDropdown>
+                            <NavDropdown title={<span><RiTaskFill style={{ color: "#aab3cc", marginRight: "10px" }} />Interview</span>} id="offcanvasNavbarDropdown">
+                                <NavDropdown.Item><Link to="/interviewschedule">Interview Schedule</Link></NavDropdown.Item>
+                                <NavDropdown.Item><Link to="/interviewtabledata">Interview Schedule List</Link></NavDropdown.Item>
+                            </NavDropdown>
+                            <NavDropdown title={<span><AiFillCalendar style={{ color: "#aab3cc", marginRight: "10px" }} />Events</span>} id="offcanvasNavbarDropdown">
+                                <NavDropdown.Item><Link to="/add-event">Add Event</Link></NavDropdown.Item>
+                                <NavDropdown.Item><Link to="/all-events">All Events</Link></NavDropdown.Item>
+                            </NavDropdown>
+                        </Nav>
+                    </Offcanvas.Body>
                 </Navbar.Offcanvas>
             </Navbar>
         </div>
