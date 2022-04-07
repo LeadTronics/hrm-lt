@@ -10,7 +10,6 @@ import Topbar from '../../Components/Topbar/Topbar'
 // import FooterBar from '../../Components/Footer/Footer'
 import { DASH_COUNT, EVENTS, EMPLOYEE_API, INTERVIEW_LIST } from '../../endpoint'
 import axios from 'axios'
-import moment from 'moment'
 import Header from '../../Components/Header/Header'
 const Dashboard = () => {
 
