@@ -4,14 +4,16 @@ import Topbar from '../../Components/Topbar/Topbar'
 import Header from '../../Components/Header/Header'
 import { EMPLOYEE_API } from '../../endpoint'
 import axios from 'axios'
+import {AiFillMail} from 'react-icons/ai'
+import {BiPhoneCall} from 'react-icons/bi'
 const Dashboard = () => {
 
     const [Data, setData] = useState([])
     const [Loader, SetLoader] = useState(false)
 
     useEffect(() => {
+        const user = JSON.parse(localStorage.getItem('token'));
         (async () => {
-            const user = JSON.parse(localStorage.getItem('token'));
             SetLoader(true)
             const result = await axios.get(EMPLOYEE_API, { headers: { Authorization: `Bearer ${user}` } });
             if (result.status === 200) {
@@ -62,10 +64,10 @@ const Dashboard = () => {
                                                             <td className="text-left fs-13">{d.department}</td>
                                                             <td className="text-end">
                                                                 <a href={`mailto:${d.email}`}>
-                                                                    <span className='action-button btn-mail me-2'>Mail</span>
+                                                                    <span className='action-button btn-mail me-2'><AiFillMail /></span>
                                                                 </a>
                                                                 <a href={`tel:${d.phone}`}>
-                                                                    <span className='action-button btn-call me-2'>Call</span>
+                                                                    <span className='action-button btn-call me-2'><BiPhoneCall /></span>
                                                                 </a>
                                                             </td>
                                                         </tr>
