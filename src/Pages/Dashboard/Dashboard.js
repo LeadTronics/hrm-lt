@@ -1,8 +1,5 @@
 import React from 'react'
 import './Dashboard.css'
-import { MdContactPage, MdEvent } from 'react-icons/md'
-import { BsFillArrowUpRightCircleFill } from 'react-icons/bs'
-import {AiFillSetting } from 'react-icons/ai'
 import Topbar from '../../Components/Topbar/Topbar'
 import Header from '../../Components/Header/Header'
 const Dashboard = () => {
