@@ -45,15 +45,9 @@ const Topbar = () => {
                         </Offcanvas.Title>
                     </Offcanvas.Header>
                     <Offcanvas.Body>
-                        <h1 style={{ color: "white", textAlign: "center" }}>HRM</h1>
-                        <div className='py-3 border-Bgray text-center'>
-                           
-                            <div className='py-2'>
-                                <h5 className='text-white mb-0'>username</h5>
-                                <div className='text-muted'>Software Developer</div>
-                            </div>
-
-                        </div>
+                        <>
+                        <Link to="/">dashboard</Link>
+                        </>
                         
                     </Offcanvas.Body>
                 </Navbar.Offcanvas>
