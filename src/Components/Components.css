@@ -49,3 +49,40 @@
 .navbar-toggler:focus {
   box-shadow: none;
 }
+/* Button css */
+.allbtncss {
+  background-color: #36f;
+  color: #fff;
+  padding: 6px 20px;
+  border-radius: 20px;
+  border: none;
+  background: linear-gradient(0deg, #36f 0%, rgba(129, 5, 240, 1) 100%);
+}
+
+.allbtncss:before {
+  height: 0%;
+  width: 2px;
+}
+
+.allbtncss:hover {
+  box-shadow: 4px 4px 6px 0 rgba(255, 255, 255, .5),
+      -4px -4px 6px 0 rgba(116, 125, 136, .5),
+      inset -4px -4px 6px 0 rgba(255, 255, 255, .2),
+      inset 4px 4px 6px 0 rgba(0, 0, 0, .4);
+}
+
+.Login-btn1 {
+  padding: 0px 80px;
+  font-weight: 500;
+  width: 100%;
+  border-radius: 25px;
+  height: 40px;
+  border: none;
+  cursor: pointer;
+  background-color: #e3effa;
+}
+
+.Login-btn1:hover {
+  color: #fff;
+  background: linear-gradient(0deg, #36f 0%, rgba(129, 5, 240, 1) 100%);
+}
