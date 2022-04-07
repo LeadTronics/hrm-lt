@@ -49,34 +49,12 @@ const Dashboard = () => {
                 console.log(err);
             });
     }, [])
-    //   var dateObj = new Date();
-    //   var month = dateObj.getUTCMonth() + 1;
-    //   var day = dateObj.getUTCDate();
-    //   var year = dateObj.getUTCFullYear();
-    //   const dayString = `${month}/${day}/${year}`;
-    //   function GetSortOrder(prop) {
-    //     return function (a, b) {
-    //       if (a[prop] > b[prop]) {
-    //         return 1;
-    //       }
-    //       else if (a[prop] < b[prop]) {
-    //         return -1;
-    //       }
-    //       return 0;
-    //     }
-    //   }
-    //   events.sort(GetSortOrder("eventDate"));
-    //   // console.log("Sorted Events : ");
-    //   for (var item in events) {
-    //   console.log(events[item].eventDate);
-    //   }
 
     return (
         <div className='dashboard'>
             <div className='sidebar-text-content'>
                 <Topbar />
                 <div className='Page-Content'>
-                    {/* <div className='dashboard-header text-center'>HR <span className='text-muted'>Dashboard</span></div> */}
                     <Header HeadingName="HR" MutedHeadName="  Dashboard" />
                     <div className='row'>
                         <div className='col-lg-9'>
@@ -157,9 +135,7 @@ const Dashboard = () => {
                                                             <tr className="d-table-row justify-content-center align-items-center align-content-center " key={index2}>
                                                                 <td>
                                                                     <div className={index2 % 2 === 0 ? "blockText1" : "blockText2"} >
-                                                                        {moment(d.eventDate).format('DD')}
-                                                                        <br />
-                                                                        {moment(d.eventDate).format('MMM')}
+                                                                        
                                                                     </div>
                                                                 </td>
                                                                 <td className="text-left">
