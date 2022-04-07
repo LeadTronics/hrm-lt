@@ -2,15 +2,16 @@ import React, { useEffect, useState } from 'react'
 import './Dashboard.css'
 import Topbar from '../../Components/Topbar/Topbar'
 import Header from '../../Components/Header/Header'
-import { EMPLOYEE_API, INTERVIEW_LIST, DASH_COUNT } from '../../endpoint'
+import { EMPLOYEE_API, INTERVIEW_LIST, DASH_COUNT, EVENTS } from '../../endpoint'
 import axios from 'axios'
-import DoughnutChart from './Doughnut'
+import moment from 'moment'
 
 const Dashboard = () => {
 
   const [Data, setData] = useState([])
   const [interview, setInterview] = useState([])
   const [totalData, setTotalData] = useState([])
+  const [events, setEvents] = useState([]);
   const [Loader, SetLoader] = useState(false)
 
   useEffect(() => {
@@ -42,9 +43,68 @@ const Dashboard = () => {
         SetLoader(false)
       }
     })();
+    (async () => {
+      SetLoader(true)
+      const result = await axios.get(EVENTS, { headers: { "Authorization": `Bearer ${user}` } });
+      if (result.status === 200) {
+        setEvents(result.data);
+        SetLoader(false)
+      }
+    })();
 
   }, [])
 
+  var dateObj = new Date();
+  var month = dateObj.getUTCMonth() + 1;
+  var day = dateObj.getUTCDate();
+  var year = dateObj.getUTCFullYear();
+  const dayString = `${month}/${day}/${year}`;
+  function GetSortOrder(prop) {
+    return function (a, b) {
+      if (a[prop] > b[prop]) {
+        return 1;
+      }
+      else if (a[prop] < b[prop]) {
+        return -1;
+      }
+      return 0;
+    }
+  }
+  events.sort(GetSortOrder("eventDate"));
+  // console.log("Sorted Events : ");
+  for (var item in events) {
+  console.log(events[item].eventDate);
+  }
+  const eventData = events.map((d, index2) => {
+    return dayString <= d.eventDate ?
+      <tr className="d-table-row justify-content-center align-items-center align-content-center " key={index2}>
+        <td>
+          <div className={index2 % 2 === 0 ? "blockText1" : "blockText2"} >
+            {moment(d.eventDate).format('DD')}
+            <br />
+            {moment(d.eventDate).format('MMM')}
+          </div>
+        </td>
+        <td className="text-left">
+          <div><h6 className='mb-0'>{d.eventTitle}</h6></div>
+          <div style={{ fontSize: "13px" }}>{d.eventDesc}</div>
+        </td>
+      </tr>
+      :
+      <tr key={index2}></tr>
+  })
+
+  const eventDataSkeleton = [0, 1, 2, 3].map(() => {
+    return (
+      <div className="Skeleton-Dash " key={Math.random()}>
+        <div className='Sk1'>
+
+        </div>
+        <div className="text-left">
+        </div>
+      </div>
+    )
+  })
 
 
   return (
@@ -132,9 +192,9 @@ const Dashboard = () => {
                   <h6>Events In This Month</h6>
                   <div className="table-responsive recent_jobs pt-2 pb-2 pl-2 pr-2" style={{ height: "290px" }}>
                     <table className="table mb-0 text-nowrap ">
-                      {/* <tbody>
-                        {!Loder ? eventData : eventDataSkeleton}
-                      </tbody> */}
+                      <tbody>
+                        {!Loader ? eventData : eventDataSkeleton}
+                      </tbody>
                     </table>
                   </div>
                 </div>
@@ -142,12 +202,12 @@ const Dashboard = () => {
               <div className="Gender-chart">
                 <div className='card mt-3 '>
                   <h6 className="mb-0">Gender By Employees</h6>
-                  <div>
+                  {/* <div>
                     <DoughnutChart />
                     <div className='overlayChart'>
                       Total Employees<br />{Data.length}
                     </div>
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </div>
