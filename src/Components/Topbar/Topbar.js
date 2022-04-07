@@ -55,7 +55,7 @@ const Topbar = () => {
 
                                         </div>
                                         <Nav style={{padding:"10px 35px"}}>
-                                            <Nav.Link href="/dashboard">Dashboard</Nav.Link>
+                                            <Nav.Link href="/dashboard"><i className='fa fa-home me-2'></i>Dashboard</Nav.Link>
                                             <NavDropdown title="Employee" id="offcanvasNavbarDropdown">
                                                 <NavDropdown.Item><Link to="/allemployee">Employee List</Link></NavDropdown.Item>
                                                 <NavDropdown.Item><Link to="/addemployee">Add Employee Details</Link></NavDropdown.Item>
@@ -71,8 +71,6 @@ const Topbar = () => {
                                         </Nav>
                                     </Offcanvas.Body>
                                 </Navbar.Offcanvas>
-
-                
             </Navbar>
         </div>
     )
