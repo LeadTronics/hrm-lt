@@ -6,6 +6,7 @@ import { EMPLOYEE_API, INTERVIEW_LIST, DASH_COUNT, EVENTS } from '../../endpoint
 import axios from 'axios'
 import moment from 'moment'
 import DoughnutChart from './Doughnut'
+import LineChart from './LineChart'
 
 const Dashboard = () => {
 
@@ -178,9 +179,9 @@ const Dashboard = () => {
                   <div className='col-lg-12'>
                     <div className='card'>
                       <h6>Number of Hirings</h6>
-                      {/* <div>
+                      <div>
                         <LineChart></LineChart>
-                      </div> */}
+                      </div>
                     </div>
                   </div>
                 </div>
