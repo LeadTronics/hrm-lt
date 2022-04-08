@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react'
 import './Dashboard.css'
 import Topbar from '../../Components/Topbar/Topbar'
 import Header from '../../Components/Header/Header'
-import FooterBar from '../../Components/Footer/Footer'
 import { EMPLOYEE_API, INTERVIEW_LIST, DASH_COUNT, EVENTS } from '../../endpoint'
 import axios from 'axios'
 import moment from 'moment'
@@ -303,7 +302,7 @@ const Dashboard = () => {
               </div>
             </div>
           </div>
-          <FooterBar />
+          {/* <FooterBar /> */}
         </div>
       </div>
     </div>

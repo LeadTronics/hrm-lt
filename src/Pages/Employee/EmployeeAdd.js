@@ -2,7 +2,7 @@ import './Employee.css'
 import React, { useState } from 'react';
 import { Col, Row, Form } from "react-bootstrap";
 import Topbar from '../../Components/Topbar/Topbar';
-import Footer from '../../Components/Footer/Footer'
+// import Footer from '../../Components/Footer/Footer'
 import Button from '../../Components/Button/Button';
 import { useForm } from "react-hook-form";
 import { EMPLOYEE_API } from '../../endpoint';
@@ -208,7 +208,7 @@ const EmployeeAdd = () => {
                         </Row>
                     </div>
                 </div>
-                <Footer />
+                {/* <Footer /> */}
             </div>
         </>
     )
