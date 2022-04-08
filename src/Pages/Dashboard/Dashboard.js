@@ -5,6 +5,7 @@ import Header from '../../Components/Header/Header'
 import { EMPLOYEE_API, INTERVIEW_LIST, DASH_COUNT, EVENTS } from '../../endpoint'
 import axios from 'axios'
 import moment from 'moment'
+import DoughnutChart from './Doughnut'
 
 const Dashboard = () => {
 
@@ -202,12 +203,12 @@ const Dashboard = () => {
               <div className="Gender-chart">
                 <div className='card mt-3 '>
                   <h6 className="mb-0">Gender By Employees</h6>
-                  {/* <div>
+                  <div>
                     <DoughnutChart />
                     <div className='overlayChart'>
                       Total Employees<br />{Data.length}
                     </div>
-                  </div> */}
+                  </div>
                 </div>
               </div>
             </div>
