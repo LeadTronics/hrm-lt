@@ -75,7 +75,7 @@ const Topbar = () => {
                             <Nav.Link href="/dashboard"><i className='fa fa-home me-2'></i>Dashboard</Nav.Link>
                             <NavDropdown title={<span><i className="fa-solid fa fa-user me-2"></i>Employee</span>} id="offcanvasNavbarDropdown">
                                 <NavDropdown.Item><Link to="/allemployee">Employee List</Link></NavDropdown.Item>
-                                <NavDropdown.Item><Link to="/addemployee">Add Employee Details</Link></NavDropdown.Item>
+                                <NavDropdown.Item><Link to="/employee-add">Add Employee Details</Link></NavDropdown.Item>
                             </NavDropdown>
                             <NavDropdown title={<span><i class="fa-solid fa fa-file me-2"></i>Interview</span>} id="offcanvasNavbarDropdown">
                                 <NavDropdown.Item><Link to="/interviewschedule">Interview Schedule</Link></NavDropdown.Item>

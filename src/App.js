@@ -5,6 +5,7 @@ import 'bootstrap/dist/js/bootstrap.bundle.min';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Dashboard from './Pages/Dashboard/Dashboard';
 import Login from './Pages/Login/Login'
+import EmployeeAdd from './Pages/Employee/EmployeeAdd';
 
 function App() {
 
@@ -15,6 +16,7 @@ function App() {
           <Routes>
             <Route path='*' element={<Login />}></Route>
             <Route path='/dashboard' element={<Dashboard />}></Route>
+            <Route path='/employee-add' element={<EmployeeAdd/>}></Route>
           </Routes>
         </Router>
       </Suspense>

@@ -127,7 +127,7 @@ const Dashboard = () => {
                           <h6 className="mb-0">Total Employees</h6>
                           <h2>{totalData.employee}</h2>
                           <span className='text-muted'>
-                            <i class='fas fa-arrow-alt-circle-up me-2' style={{ color: '#0dcd94' }}></i>
+                            <i className='fas fa-arrow-alt-circle-up me-2' style={{ color: '#0dcd94' }}></i>
                             <span className='me-2' style={{ color: '#0dcd94' }}>{totalData.employee}</span>
                             for last month
                           </span>
