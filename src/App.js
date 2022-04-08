@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
@@ -10,12 +10,14 @@ function App() {
 
   return (
     <div className="App">
-       <Router>
+      <Suspense>
+        <Router>
           <Routes>
-          <Route path='*' element={<Login />}></Route>
+            <Route path='*' element={<Login />}></Route>
             <Route path='/dashboard' element={<Dashboard />}></Route>
           </Routes>
         </Router>
+      </Suspense>
     </div>
   );
 }
